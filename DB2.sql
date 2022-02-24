@@ -99,8 +99,10 @@ insert into account values ("cust1", "CLogin123", 11, "Sam", "121 Earth St.", "s
 
 create table author (
 	author_id int,
+	author_name char(255),
 	constraint foreign key (author_id) references user(id)
 );
+insert into author values (16, "Goblin Boy");
 
 create table book (
 	isbn char(255),
@@ -159,6 +161,7 @@ create table cart (
 	constraint foreign key (order_id) references orders(order_id),
 	primary key (cart_id)	
 )AUTO_INCREMENT=1;
+
 
 
 
